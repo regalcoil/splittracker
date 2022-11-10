@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css?family=Xanh+Mono&display=swap');
+
+body {
+	background-color: black;
+	color: white;
+	font-family: 'Xanh Mono', courier, sans-serif;
+}
+
+input {
+	width: 10%;
+}
+
+button {
+	background-color: white;
+	color: black;
+	font-family: courier, sans-serif;
+}
+
+#console {
+	text-align: center;
+
+}
