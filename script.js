@@ -104,7 +104,7 @@ function next(y) {
 		var hh = document.getElementById("hours").value * 3600
 		var mm = document.getElementById("minutes").value * 60
 		var ss = document.getElementById("seconds").value
-		time = parseInt(hh)+parseInt(mm)+parseInt(ss)
+		time = parseInt(hh)+parseInt(mm)+parseFloat(ss)
 		$("#console").empty()
 		equivalence(time, y)
 	})
@@ -115,7 +115,7 @@ function hrs(x) {
 	var hours = document.getElementById("hours").value;
 	if (hours<0) {
 		$("#console").empty()
-		$("#console").append("<div>Please enter positive positive numbers only</div>")
+		$("#console").append("<div>Please enter positive numbers only</div>")
 		runner(x)
 	}
 }
@@ -125,7 +125,7 @@ function mins(x) {
 	var minutes = document.getElementById("minutes").value;
 	if (minutes<0) {
 		$("#console").empty()
-		$("#console").append("<div>Please enter positive positive numbers only</div>")
+		$("#console").append("<div>Please enter positive numbers only</div>")
 		runner(x)
 	}
 
@@ -136,7 +136,7 @@ function secs(x) {
 	var seconds = document.getElementById("seconds").value;
 	if (seconds<0) {
 		$("#console").empty()
-		$("#console").append("<div>Please enter positive positive numbers only</div>")
+		$("#console").append("<div>Please enter positive numbers only</div>")
 		runner(x)
 	}
 }
