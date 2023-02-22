@@ -30,6 +30,7 @@ function conversion(x, z) {
 		sms = sss
 		sss = Math.floor(sss)
 		point = sms - sss
+		point = point.toFixed(2)
 		if (point == 0) {
 			point = "00"
 		}
@@ -54,6 +55,7 @@ function conversion(x, z) {
 		sms = sss
 		sss = Math.floor(sss)
 		point = sms - sss
+		point = point.toFixed(2)
 		console.log(point)
 		if (point == 0) {
 			point = "00"
@@ -73,6 +75,7 @@ function conversion(x, z) {
 		sms = x
 		sss = Math.floor(x)
 		point = sms - sss
+		point = point.toFixed(2)
 		if (point == 0) {
 			point = "00"
 		}
