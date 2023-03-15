@@ -1,9 +1,19 @@
-@import url('https://fonts.googleapis.com/css?family=Xanh+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+#header {
+	font-family: 'Anton';
+	background-color: gold;
+	position:fixed;
+    top: 0;
+    left: 0;
+    width:100%;
+}
+
 
 body {
 	background-color: black;
-	color: white;
-	font-family: 'Xanh Mono', courier, sans-serif;
+	color: black;
+	font-family: 'Tahoma', courier, sans-serif;
 }
 
 input {
@@ -11,12 +21,18 @@ input {
 }
 
 button {
+	font-size: 15px;
 	background-color: white;
 	color: black;
-	font-family: courier, sans-serif;
+	font-family: 'Tahoma', courier, sans-serif;
+}
+
+img {
+	width: 400px;
 }
 
 #console {
 	text-align: center;
+	color: white;
 
 }
