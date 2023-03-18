@@ -47,6 +47,7 @@ button {
 }
 
 #console {
+	font-style: italic;
 	text-align: center;
 	color: white;
 }
