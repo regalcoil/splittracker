@@ -98,7 +98,7 @@ function equivalence(x, y) {
 	}
 	speedmi(x, y)
 	speedkm(x, y)
-	$("#console").append("<br><div><button style='background-color: black; color: white;' onClick='initial()'>Restart</button></div>")
+	$("#console").append("<br><div><button style='background-color: red; border: solid white 2px; color: white;' onClick='initial()'>Restart</button></div>")
 }
 
 function next(y) {
@@ -113,7 +113,7 @@ function next(y) {
 }
 
 function hrs(x) {	
-	$("#console").append("<div style='text-align: center; width: 100%'><label for='hours'>Hours</label><br><input type='number' id='hours' name='hours'></div><br>")
+	$("#console").append("<div style='text-align: center; width: 100%'><label for='hours'>Hours</label><br><input min='0' placeholder='0' type='number' id='hours' name='hours'></div><br>")
 	var hours = document.getElementById("hours").value;
 	if (hours<0) {
 		$("#console").empty()
@@ -123,7 +123,7 @@ function hrs(x) {
 }
 
 function mins(x) {
-	$("#console").append("<div style='text-align: center; width: 100%'><label for='minutes'>Minutes</label><br><input type='number' id='minutes' name='minutes'></div><br>")
+	$("#console").append("<div style='text-align: center; width: 100%'><label for='minutes'>Minutes</label><br><input min='0' placeholder='0' type='number' id='minutes' name='minutes'></div><br>")
 	var minutes = document.getElementById("minutes").value;
 	if (minutes<0) {
 		$("#console").empty()
@@ -134,7 +134,7 @@ function mins(x) {
 }
 
 function secs(x) {
-	$("#console").append("<div style='text-align: center; width: 100%'><label for='seconds'>Seconds</Slabel><br><input type='number' id='seconds' name='seconds'></div>")
+	$("#console").append("<div style='text-align: center; width: 100%'><label for='seconds'>Seconds</Slabel><br><input min='0' placeholder='0' value='0' type='number' id='seconds' name='seconds'></div>")
 	var seconds = document.getElementById("seconds").value;
 	if (seconds<0) {
 		$("#console").empty()
@@ -144,7 +144,7 @@ function secs(x) {
 }
 
 function runner(race) {
-	$("#console").append("<br><div style='text-align: center;'>What is your current or target time?</div><br>")
+	$("#console").append("<br><div style='text-align: center;'>What is your current or target time for " + race + "?</div><br>")
 	hrs()
 	mins()
 	secs()
@@ -156,9 +156,9 @@ function initial() {
 	$("#console").empty()
 	$("#console").append("<br><div style='text-align: center;'>Which race do you run?</div><br>")
 	for (i in runs) {
-		$("#console").append("<div style='text-align: center;'><button style='text-align: center; height: 25px; width: 25%' id='" + runs[i] + "'>" + runs[i] + "</button></div>")
+		$("#console").append("<div style='text-align: center;'><button style='text-align: center; height: 25px; width: 25%' class='picker' id='" + runs[i] + "'>" + runs[i] + "</button></div>")
 	}
-	$("button").click(function() {
+	$(".picker").click(function() {
 		var pick = $(this).attr('id')
 		$("#console").empty()
 		runner(pick)
@@ -166,9 +166,6 @@ function initial() {
 }
 
 initial()
-
-
-
 
 
 
